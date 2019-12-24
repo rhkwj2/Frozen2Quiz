@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     
-    @IBOutlet var answer: [UIButton]!
+    @IBOutlet var answers: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +25,43 @@ class ViewController: UIViewController {
         
         let question1 = Question()
         question1.description = "What is the name of the sea that Elsa must face on her journey?"
-        question1.answer1 = "The Light Sea"
-        question1.answer2 = "The Salty Sea"
-        question1.answer3 = "The Dark Sea"
-        question1.answer4 = "The Wet Sea"
+        question1.answer0 = "The Light Sea"
+        question1.answer1 = "The Salty Sea"
+        question1.answer2 = "The Dark Sea"
+        question1.answer3 = "The Wet Sea"
         
-        questionLabel.text = question1.description
+         let question2 = Question()
+        question2.description = "In Frozen 2, Olaf is no longer made of snow. Then what is he made of?"
+        question2.answer0 = "Ice"
+        question2.answer1 = "Permafrost"
+        question2.answer2 = "Glass"
+        question2.answer3 = "The Wet Sea"
+        
+        func setupQATexts(){
+            questionLabel.text = Question().description
+            let button0: UIButton = answers.filter { (button) -> Bool in
+                return button.tag == 0
+            }.first!
+            button0.setTitle(question1.answer0, for: .normal)
+            
+            let button1: UIButton = answers.filter { (button) -> Bool in
+                return button.tag == 1
+            }.first!
+            button1.setTitle(question1.answer1, for: .normal)
+            
+            let button2: UIButton = answers.filter { (button) -> Bool in
+                return button.tag == 2
+            }.first!
+            button2.setTitle(question1.answer2, for: .normal)
+            
+            let button3: UIButton = answers.filter { (button) -> Bool in
+                return button.tag == 3
+            }.first!
+            button3.setTitle(question1.answer3, for: .normal)
+            
+        }
+        
+        setupQATexts()
         
        // let question2 = Question()
         

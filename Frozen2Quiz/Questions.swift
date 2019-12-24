@@ -13,8 +13,8 @@ import Foundation
 
 class Question {
     var description = ""
+    var answer0 = ""
     var answer1 = ""
     var answer2 = ""
     var answer3 = ""
-    var answer4 = ""
 }
