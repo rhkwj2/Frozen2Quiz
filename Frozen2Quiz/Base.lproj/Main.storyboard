@@ -15,21 +15,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9se-j9-jFR">
-                                <rect key="frame" x="25" y="62" width="325" height="251"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9se-j9-jFR">
+                                <rect key="frame" x="25" y="59" width="325" height="252"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9se-j9-jFR" secondAttribute="height" multiplier="325:251" id="fxd-1i-nMo"/>
+                                </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zPa-S3-rIa">
-                                <rect key="frame" x="25" y="375" width="75.5" height="237.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zPa-S3-rIa">
+                                <rect key="frame" x="25" y="413.5" width="325" height="237.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyj-Tg-BTf">
-                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="29.5"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZm-Gq-Res">
-                                        <rect key="frame" x="0.0" y="49.5" width="75.5" height="32"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="325" height="32"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -37,7 +39,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYW-GI-PhV">
-                                        <rect key="frame" x="0.0" y="101.5" width="75.5" height="32"/>
+                                        <rect key="frame" x="0.0" y="101.5" width="325" height="32"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -45,7 +47,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sac-Oy-XY7">
-                                        <rect key="frame" x="0.0" y="153.5" width="75.5" height="32"/>
+                                        <rect key="frame" x="0.0" y="153.5" width="325" height="32"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -53,7 +55,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8b-W3-HWw">
-                                        <rect key="frame" x="0.0" y="205.5" width="75.5" height="32"/>
+                                        <rect key="frame" x="0.0" y="205.5" width="325" height="32"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -62,19 +64,25 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4SM-HW-i4g">
-                                <rect key="frame" x="25" y="332" width="325" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh3-jJ-vKF">
-                                <rect key="frame" x="298" y="34" width="52" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh3-jJ-vKF">
+                                <rect key="frame" x="298" y="34" width="51.5" height="18"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9se-j9-jFR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="85a-zu-c3b"/>
+                            <constraint firstItem="vh3-jJ-vKF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="JDf-3E-4Gl"/>
+                            <constraint firstItem="zPa-S3-rIa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="f2J-55-qlV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zPa-S3-rIa" secondAttribute="trailing" constant="25" id="kaA-w8-QA6"/>
+                            <constraint firstItem="9se-j9-jFR" firstAttribute="top" secondItem="vh3-jJ-vKF" secondAttribute="bottom" constant="8" id="lOr-zG-As4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9se-j9-jFR" secondAttribute="trailing" constant="25" id="mf3-be-obe"/>
+                            <constraint firstItem="vh3-jJ-vKF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="298" id="pdf-Ud-sjk"/>
+                            <constraint firstItem="9se-j9-jFR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="rvv-5O-w4D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zPa-S3-rIa" secondAttribute="bottom" constant="16" id="uzu-UC-KBT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -91,4 +99,7 @@
             <point key="canvasLocation" x="138.40000000000001" y="116.49175412293854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="square.and.arrow.up.fill" catalog="system" width="56" height="64"/>
+    </resources>
 </document>
