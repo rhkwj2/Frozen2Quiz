@@ -86,6 +86,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="9se-j9-jFR" id="FPF-vO-rik"/>
                         <outlet property="questionLabel" destination="Cyj-Tg-BTf" id="9Cn-cw-tdm"/>
                         <outlet property="timeLabel" destination="vh3-jJ-vKF" id="ygh-aB-D1y"/>
                         <outletCollection property="answers" destination="YZm-Gq-Res" collectionClass="NSMutableArray" id="BZo-Tk-hr0"/>
@@ -100,6 +101,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="10" width="602" height="537"/>
+        <image name="10" width="301" height="268.5"/>
     </resources>
 </document>
