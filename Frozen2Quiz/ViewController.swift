@@ -55,6 +55,54 @@ class ViewController: UIViewController {
         question4.answer3 = "Plastic"
         questions.append(question3)
         
+        let question5 = Question()
+        question5.description = "We all know that Elsa and Anna's dad is King Agnarr. What does his name mean in Norse?"
+        question5.answer0 = "Greedy King"
+        question5.answer1 = "Kind Father"
+        question5.answer2 = "Brave Warrior"
+        question5.answer3 = "Ruthless Leader"
+        questions.append(question3)
+        
+        let question6 = Question()
+        question6.description = "Which character sings the song, Into the Unknown?"
+        question6.answer0 = "Anna"
+        question6.answer1 = "Elsa"
+        question6.answer2 = "Olaf"
+        question6.answer3 = "Sven"
+        questions.append(question3)
+        
+        let question7 = Question()
+        question7.description = "What is Elsa and Anna's mum called?"
+        question7.answer0 = "Helga"
+        question7.answer1 = "Hildur"
+        question7.answer2 = "Iduna"
+        question7.answer3 = "Erla"
+        questions.append(question3)
+        
+        let question8 = Question()
+        question8.description = "What are the Earth Giants made from?"
+        question8.answer0 = "Mud"
+        question8.answer1 = "Leaves"
+        question8.answer2 = "Sand"
+        question8.answer3 = "Rock"
+        questions.append(question3)
+        
+        let question9 = Question()
+        question9.description = "Can you tell us the name of the wind spirit?"
+        question9.answer0 = "Harry Karne"
+        question9.answer1 = "Gale"
+        question9.answer2 = "Bluster"
+        question9.answer3 = "Breezi"
+        questions.append(question3)
+        
+        let question10 = Question()
+        question10.description = "How many years after the original Frozen story does the new film take place?"
+        question10.answer0 = "3"
+        question10.answer1 = "2"
+        question10.answer2 = "5"
+        question10.answer3 = "10"
+        questions.append(question3)
+        
         
         questionLabel.text = questions[index].description
 
@@ -99,6 +147,10 @@ class ViewController: UIViewController {
 //        default:
 //            break
 //        }
+        index += 1
+        if index < questions.count {
+            setupQATexts(question: questions[index])
+        }
         
         
     }
