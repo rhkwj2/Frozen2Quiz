@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,60 +12,60 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Frozen2Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="9se-j9-jFR">
-                                <rect key="frame" x="25" y="104" width="364" height="281"/>
+                                <rect key="frame" x="25" y="60" width="325" height="251"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9se-j9-jFR" secondAttribute="height" multiplier="325:251" id="fxd-1i-nMo"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zPa-S3-rIa">
-                                <rect key="frame" x="25" y="608.5" width="364" height="237.5"/>
+                                <rect key="frame" x="25" y="413.5" width="325" height="237.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyj-Tg-BTf">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="29.5"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZm-Gq-Res">
-                                        <rect key="frame" x="0.0" y="49.5" width="364" height="32"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="325" height="32"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="answer1DidPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BXC-MK-DwV"/>
+                                            <action selector="answerDidPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BXC-MK-DwV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYW-GI-PhV">
-                                        <rect key="frame" x="0.0" y="101.5" width="364" height="32"/>
+                                        <rect key="frame" x="0.0" y="101.5" width="325" height="32"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="answer1DidPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXV-z7-VqX"/>
+                                            <action selector="answerDidPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXV-z7-VqX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sac-Oy-XY7">
-                                        <rect key="frame" x="0.0" y="153.5" width="364" height="32"/>
+                                        <rect key="frame" x="0.0" y="153.5" width="325" height="32"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="answer1DidPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PUc-rS-Cdx"/>
+                                            <action selector="answerDidPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PUc-rS-Cdx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8b-W3-HWw">
-                                        <rect key="frame" x="0.0" y="205.5" width="364" height="32"/>
+                                        <rect key="frame" x="0.0" y="205.5" width="325" height="32"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="answer1DidPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vYw-Py-rUW"/>
+                                            <action selector="answerDidPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vYw-Py-rUW"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh3-jJ-vKF">
-                                <rect key="frame" x="298" y="78" width="51.5" height="18"/>
+                                <rect key="frame" x="298" y="34" width="51.5" height="18"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -87,8 +87,8 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="9se-j9-jFR" id="FPF-vO-rik"/>
+                        <outlet property="prosessLabel" destination="vh3-jJ-vKF" id="2lY-mC-QBH"/>
                         <outlet property="questionLabel" destination="Cyj-Tg-BTf" id="9Cn-cw-tdm"/>
-                        <outlet property="timeLabel" destination="vh3-jJ-vKF" id="ygh-aB-D1y"/>
                         <outletCollection property="answers" destination="YZm-Gq-Res" collectionClass="NSMutableArray" id="BZo-Tk-hr0"/>
                         <outletCollection property="answers" destination="dYW-GI-PhV" collectionClass="NSMutableArray" id="XyK-bh-RO0"/>
                         <outletCollection property="answers" destination="sac-Oy-XY7" collectionClass="NSMutableArray" id="PrM-ux-YFs"/>

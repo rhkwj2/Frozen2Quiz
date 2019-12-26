@@ -14,16 +14,19 @@ class ViewController: UIViewController {
     var questions = [Question]()
     
     @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var timeLabel: UILabel!
+   
+    @IBOutlet weak var prosessLabel: UILabel!
     
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet var answers: [UIButton]!
     
+    var rightAnswer: [String]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        prosessLabel.text = "\(index+1)/10"
         prepareQnA()
         setupQnA(question: questions[index])
     }
@@ -35,6 +38,8 @@ class ViewController: UIViewController {
                 question1.answer1 = "The Salty Sea"
                 question1.answer2 = "The Dark Sea"
                 question1.answer3 = "The Wet Sea"
+        //The Button pressed, show the green color button
+        
                 questions.append(question1)
                 
                  let question2 = Question()
@@ -108,7 +113,13 @@ class ViewController: UIViewController {
                 question10.answer2 = "5"
                 question10.answer3 = "10"
                 questions.append(question10)
+        
+        
+        rightAnswer = [question1.answer2, question2.answer1, question3.answer1, question4.answer1, question5.answer2, question6.answer1, question7.answer2, question8.answer3, question9.answer1, question10.answer2]
     }
+
+    
+
     
     func setupQnA(question: Question){
         questionLabel.text = question.description
@@ -136,24 +147,40 @@ class ViewController: UIViewController {
         imageView.image = UIImage(named: indexString)
     }
     
-   
-
-    @IBAction func answer1DidPressed(_ sender: UIButton) {
-//        switch sender.tag {
-//        case 0:
-//            let answer1String = questions[index].answer1
-//        case 1:
-//            let answer2String = questions[index].answer2
-//        case 2:
-//            let answer3String = questions[index].answer3
-//
-//        default:
-//            break
-//        }
+    
+    
+    @IBAction func answerDidPressed(_ sender: UIButton) {
+        for button in answers {
+            if button == sender { // if the button is the one you selected,
+                // then the button will turn green/red
+                if button.titleLabel!.text == rightAnswer[index] {
+                    button.setTitleColor(.green, for: .normal)
+                } else {
+                    button.setTitleColor(.red, for: .normal)
+                }
+            } else {
+                // if the button is NOT the one you selected,
+                // it will turn gray/green
+                if button.titleLabel!.text == rightAnswer[index] {
+                    button.setTitleColor(.green, for: .normal)
+                } else {
+                    button.setTitleColor(.gray, for: .normal)
+                }
+            }
+        }
+        
         index += 1
         if index < questions.count {
             setupQnA(question: questions[index])
-        }
+            prosessLabel.text = "\(index+1)/10"
+       }
     }
+    
+    func RightAnswer() {
+        //The Button pressed, show the green color button
+        
+        
+    }
+    
 }
 
