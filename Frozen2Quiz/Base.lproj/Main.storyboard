@@ -20,6 +20,11 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9se-j9-jFR" secondAttribute="height" multiplier="325:251" id="fxd-1i-nMo"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zPa-S3-rIa">
                                 <rect key="frame" x="25" y="413.5" width="325" height="237.5"/>
@@ -89,10 +94,10 @@
                         <outlet property="imageView" destination="9se-j9-jFR" id="FPF-vO-rik"/>
                         <outlet property="prosessLabel" destination="vh3-jJ-vKF" id="2lY-mC-QBH"/>
                         <outlet property="questionLabel" destination="Cyj-Tg-BTf" id="9Cn-cw-tdm"/>
-                        <outletCollection property="answers" destination="YZm-Gq-Res" collectionClass="NSMutableArray" id="BZo-Tk-hr0"/>
-                        <outletCollection property="answers" destination="dYW-GI-PhV" collectionClass="NSMutableArray" id="XyK-bh-RO0"/>
-                        <outletCollection property="answers" destination="sac-Oy-XY7" collectionClass="NSMutableArray" id="PrM-ux-YFs"/>
-                        <outletCollection property="answers" destination="f8b-W3-HWw" collectionClass="NSMutableArray" id="r4f-vv-CyC"/>
+                        <outletCollection property="answerButtons" destination="YZm-Gq-Res" collectionClass="NSMutableArray" id="BZo-Tk-hr0"/>
+                        <outletCollection property="answerButtons" destination="dYW-GI-PhV" collectionClass="NSMutableArray" id="XyK-bh-RO0"/>
+                        <outletCollection property="answerButtons" destination="sac-Oy-XY7" collectionClass="NSMutableArray" id="PrM-ux-YFs"/>
+                        <outletCollection property="answerButtons" destination="f8b-W3-HWw" collectionClass="NSMutableArray" id="r4f-vv-CyC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

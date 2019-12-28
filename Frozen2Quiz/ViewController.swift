@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     
-    @IBOutlet var answers: [UIButton]!
+    @IBOutlet var answerButtons: [UIButton]!
     
     var rightAnswer: [String]!
     
@@ -122,23 +122,30 @@ class ViewController: UIViewController {
 
     
     func setupQnA(question: Question){
+        
+        // change all the button's text color to be blue
+        answerButtons.forEach { (button) in
+            // set each of the button to be blue
+            button.setTitleColor(.systemBlue, for: .normal)
+        }
+        
         questionLabel.text = question.description
-        let button0: UIButton = answers.filter { (button) -> Bool in
+        let button0: UIButton = answerButtons.filter { (button) -> Bool in
             return button.tag == 0
         }.first!
         button0.setTitle(question.answer0, for: .normal)
         
-        let button1: UIButton = answers.filter { (button) -> Bool in
+        let button1: UIButton = answerButtons.filter { (button) -> Bool in
             return button.tag == 1
         }.first!
         button1.setTitle(question.answer1, for: .normal)
         
-        let button2: UIButton = answers.filter { (button) -> Bool in
+        let button2: UIButton = answerButtons.filter { (button) -> Bool in
             return button.tag == 2
         }.first!
         button2.setTitle(question.answer2, for: .normal)
         
-        let button3: UIButton = answers.filter { (button) -> Bool in
+        let button3: UIButton = answerButtons.filter { (button) -> Bool in
             return button.tag == 3
         }.first!
         button3.setTitle(question.answer3, for: .normal)
@@ -147,10 +154,11 @@ class ViewController: UIViewController {
         imageView.image = UIImage(named: indexString)
     }
     
-    
+    //https://developer.apple.com/documentation/uikit/uibutton/1623993-settitlecolor
+    //https://www.robnorback.com/blog/setting-title-and-title-color-on-a-uibutton-in-swift-3
     
     @IBAction func answerDidPressed(_ sender: UIButton) {
-        for button in answers {
+        for button in answerButtons {
             if button == sender { // if the button is the one you selected,
                 // then the button will turn green/red
                 if button.titleLabel!.text == rightAnswer[index] {
@@ -168,12 +176,14 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
-        index += 1
-        if index < questions.count {
-            setupQnA(question: questions[index])
-            prosessLabel.text = "\(index+1)/10"
-       }
+        //https://stackoverflow.com/questions/44737812/how-to-dismiss-a-view-in-code-after-two-seconds
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.index += 1
+            if self.index < self.questions.count {
+                 self.setupQnA(question: self.questions[self.index])
+                 self.prosessLabel.text = "\(self.index+1)/10"
+            }
+        }
     }
     
     func RightAnswer() {
