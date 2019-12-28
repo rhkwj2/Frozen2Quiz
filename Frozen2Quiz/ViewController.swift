@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     
     var rightAnswer: [String]!
     
+    var totalScore: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -117,9 +119,6 @@ class ViewController: UIViewController {
         
         rightAnswer = [question1.answer2, question2.answer1, question3.answer1, question4.answer1, question5.answer2, question6.answer1, question7.answer2, question8.answer3, question9.answer1, question10.answer2]
     }
-
-    
-
     
     func setupQnA(question: Question){
         
@@ -163,6 +162,8 @@ class ViewController: UIViewController {
                 // then the button will turn green/red
                 if button.titleLabel!.text == rightAnswer[index] {
                     button.setTitleColor(.green, for: .normal)
+                    // when the answer is right, the user got points
+                    totalScore += 1
                 } else {
                     button.setTitleColor(.red, for: .normal)
                 }
@@ -176,12 +177,18 @@ class ViewController: UIViewController {
                 }
             }
         }
+        
+        
         //https://stackoverflow.com/questions/44737812/how-to-dismiss-a-view-in-code-after-two-seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.index += 1
             if self.index < self.questions.count {
                  self.setupQnA(question: self.questions[self.index])
                  self.prosessLabel.text = "\(self.index+1)/10"
+            }
+            
+            if self.index == 10 {
+                self.showFinalScore()
             }
         }
     }
@@ -190,6 +197,18 @@ class ViewController: UIViewController {
         //The Button pressed, show the green color button
         
         
+    }
+   //https://learnappmaking.com/uialertcontroller-alerts-swift-how-to/
+  //https://stackoverflow.com/questions/24022479/how-would-i-create-a-uialertview-in-swift
+    func showFinalScore() {
+        // create the alert
+        let alert = UIAlertController(title: "Score", message: "Your Score is \(totalScore).", preferredStyle: UIAlertController.Style.alert)
+
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
